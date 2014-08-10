@@ -1,4 +1,4 @@
-![Cuda](http://d.pr/i/pTic/46NNGJxuCuda)
+![Cuda](http://d.pr/i/pTic/46NNGJxu)
 ===
 
 Overview
