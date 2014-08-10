@@ -104,7 +104,7 @@ line:
 > npm install ldapjs
 ```
 
-Now, create and `app.js` or `index.js` file, and place the following in the file:
+Now, create an `app.js` or `index.js` file, and place the following in the file:
 
 ```
 var ldap = require('ldapjs');
