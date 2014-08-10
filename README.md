@@ -95,7 +95,7 @@ if you need LDAP authentication, you'll should test LDAP authentication during
 development. If you don't have access to an LDAP server for testing, you can
 setup [ldapjs] (https://github.com/mcavage/node-ldapjs) and run a local LDAP server for testing.
 
-Please refer to the (ldapjs documentation) [http://ldapjs.org/guide.html] for
+Please refer to the [ldapjs documentation] (http://ldapjs.org/guide.html) for
 complete instructions, but the essence of setting up ldapjs is to create a
 separate project folder for ldap testing, then within that folder at the command
 line:
