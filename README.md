@@ -38,6 +38,8 @@ From the command line, run the following commands:
 > yo meteor
 ```
 
+#### Yeoman / Meteor generator prompts
+
 When prompted by the Yeoman generator, answer the questions with the following
 answers (the 'no' files will already be in the git repo, so there's no need to
 instal them):
@@ -51,8 +53,8 @@ instal them):
 If you now run `ls -al` (`dir` on Windows), you should see a bunch of new files
 and folders, such as the .meteor folder, and the client, public and server folders.
 
-Update Meteor version
-====
+#### Update Meteor version
+
 Let's ensure that our yeoman-generated project is using the latest version of Meteor.
 From the command line, run:
 
