@@ -29,8 +29,7 @@ and you may experience some issues when installing Meteor on Windows.
 Where applicable, Windows-related issues and solutions will be noted throughout
 this document.
 
-Installing Yeoman and the Meteor generator
-====
+#### Installing Yeoman and the Meteor generator
 From the command line, run the following commands:
 
 ```
@@ -61,8 +60,8 @@ From the command line, run:
 > meteor update
 ```
 
-Update Meteor packages
-====
+#### Update Meteor packages
+
 Before we can run the app, we need to make sure that all Meteor packages are
 installed. So, from the command line, run:
 
