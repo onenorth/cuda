@@ -1,4 +1,4 @@
-![Cuda](http://d.pr/i/pTic/46NNGJxu)
+![Cuda](cuda.jpg)
 ===
 
 Overview
