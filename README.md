@@ -87,3 +87,83 @@ messages about updating dependencies and connecting
 
 You can now access your app at `http://localhost` (plus the :port if you specified
 a port when starting the app).
+
+Using LDAP authentication
+===
+if you need LDAP authentication, you'll should test LDAP authentication during
+development. If you don't have access to an LDAP server for testing, you can
+setup [ldapjs] (https://github.com/mcavage/node-ldapjs) and run a local LDAP server for testing.
+
+Please refer to the (ldapjs documentation) [http://ldapjs.org/guide.html] for
+complete instructions, but the essence of setting up ldapjs is to create a
+separate project folder for ldap testing, then within that folder at the command
+line:
+
+```
+> npm install ldapjs
+```
+
+Now, create and `app.js` or `index.js` file, and place the following in the file:
+
+```
+var ldap = require('ldapjs');
+
+var server = ldap.createServer();
+
+server.search('dc=example', function(req, res, next) {
+  var obj = {
+    dn: req.dn.toString(),
+    attributes: {
+      objectclass: ['organization', 'top'],
+      o: 'example'
+    }
+  };
+
+  if (req.filter.matches(obj.attributes))
+  res.send(obj);
+
+  res.end();
+});
+
+server.listen(1389, function() {
+  console.log('ldapjs listening at ' + server.url);
+});
+```
+
+After you've created the file with the above code, run the following from the
+command line (assumes you created a file called index.js):
+
+```
+> node index.js
+```
+
+Now, in a separate terminal window, you can test your LDAP server by issuing the
+following command from the command line:
+
+```
+> ldapsearch -H ldap://localhost:1389 -x -b dc=example objectclass=*
+```
+When you run this command, you should see output like the following:
+
+```
+# extended LDIF
+#
+# LDAPv3
+# base <dc=example> with scope subtree
+# filter: objectclass=*
+# requesting: ALL
+#
+
+# example
+dn: dc=example
+objectclass: organization
+objectclass: top
+o: example
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 2
+# numEntries: 1
+```
