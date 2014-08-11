@@ -11,9 +11,11 @@ Getting Started
 You will need to perform the following steps to use the Cuda repository:
 
 * Clone this repository
+* Clone and initialize submodules
 * Run npm install
 * Install Meteor
 * Update Meteor-specific modules (e.g., mrt modules)
+* Add meteor-accounts-ldap package (optional)
 
 #### Clone this repository
 To clone this repository, run the following from the command line:
@@ -31,7 +33,7 @@ OR via SSH
 >> NOTE: Everything that follows in this document assumes that you first navigate to the project
 directory in your terminal, thereby you will execute all commmands within the repo project directory
 
-#### Cloning and initializing submodules
+#### Clone and initialize submodules
 To clone and initialize any required submodules, run the following command from
 the command line after you clone the repository:
 
@@ -52,14 +54,22 @@ To install Meteor, run the following command from the command line:
 
 This will install Meteor as a global npm module
 
-#### Updating Meteor-specific modules
+#### Updating Meteor smart packages
 
-Now, you need to ensure all Meteor-specific modules are up-to-date. After you've
+Now, you need to ensure all Meteor smart packages are up-to-date. After you've
 installed Meteor, run the following from the command line:
 
 ```
 > mrt update
 ```
+
+#### Add meteor-accounts-ldap package (optional)
+If you need to support LDAP authentication, you can install the meteor-accounts-ldap
+package
+
+>> NOTE: The meteor-accounts-ldap package is a OneNorth for of [emgee3] (https://github.com/emgee3)'s original [meteor-accounts-ldap] (https://github.com/emgee3/meteor-accounts-ldap) package
+
+
 #### Using npm modules inside Meteor
 If you want to use npm modules inside of Meteor, you will need to ensure that you've run
 the following from the command line before you attempt to reference any npm modules in the app:
@@ -226,3 +236,8 @@ result: 0 Success
 # numResponses: 2
 # numEntries: 1
 ```
+
+### Additional Resources
+
+* [Using node modules with Meteor] (https://davidbeath.com/posts/using-node-modules-with-meteor.html)
+* [Complete NPM integration for Meteor] (https://meteorhacks.com/complete-npm-integration-for-meteor.html)

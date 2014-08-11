@@ -23,7 +23,6 @@
   "homepage": "https://github.com/onenorth/cuda",
   "dependencies": {
     "meteor-npm": "~0.1.10",
-    "meteor-accounts-ldap": "git+https://git@github.com/onenorth/meteor-accounts-ldap.git"
   },
   "devDependencies": {
     "usage": "git+https://git@github.com/arunoda/node-usage.git"
