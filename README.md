@@ -13,7 +13,7 @@ You will need to perform the following steps to use the Cuda repository:
 * Clone this repository
 * Clone and initialize all submodules
 * Install Meteor
-* Update Meteors-specific modules (e.g., mrt modules)
+* Update Meteor-specific modules (e.g., mrt modules)
 
 #### Clone this repository
 To clone this repository, run the following from the command line:
