@@ -69,6 +69,15 @@ package
 
 >> NOTE: The meteor-accounts-ldap package is a OneNorth for of [emgee3] (https://github.com/emgee3)'s original [meteor-accounts-ldap] (https://github.com/emgee3/meteor-accounts-ldap) package
 
+To install the meteor-accounts-ldap package (if it is not already installed),
+run the following from the command line:
+
+```
+> meteor add meteor-accounts-ldap
+```
+
+When this completes, you should have a ```meteor-accounts-ldap``` directory inside
+the root ```packages``` directory.
 
 #### Using npm modules inside Meteor
 If you want to use npm modules inside of Meteor, you will need to ensure that you've run
@@ -241,3 +250,4 @@ result: 0 Success
 
 * [Using node modules with Meteor] (https://davidbeath.com/posts/using-node-modules-with-meteor.html)
 * [Complete NPM integration for Meteor] (https://meteorhacks.com/complete-npm-integration-for-meteor.html)
+* [Is it possible to use a nodejs package inside a meteor app?] (http://stackoverflow.com/questions/11691513/it-possible-use-a-nodejs-package-inside-meteor-app)
