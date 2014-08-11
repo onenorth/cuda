@@ -1,0 +1,3 @@
+[submodule "meteor-accounts-ldap"]
+	path = meteor-accounts-ldap
+	url = https://github.com/emgee3/meteor-accounts-ldap
