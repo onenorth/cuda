@@ -8,14 +8,49 @@ to focus and simplify the out-of-the-box Barracuda interface.
 
 Getting Started
 ===
+You will need to perform the following steps to use the Cuda repository:
 
-To get started with the code from this repo, run the following commands from the
-command line:
+* Clone this repository
+* Clone and initialize all submodules
+* Install Meteor
+* Update Meteors-specific modules (e.g., mrt modules)
+
+#### Cloning and initializing submodules
+To clone and initialize any required submodules, run the following command from
+the command line after you clone the repository:
+
+```
+> git submodule update --init
+```
+
+>> Alternatively, as long as you're using git version 1.6.5 or later, you can include the ```--recursive``` flag when you clone this repo. The recursive command tells git to look for all
+submodules to clone and initialize after the super-project has been cloned.
+
+#### Installing Meteor
+
+To install Meteor, run the following command from the command line:
 
 ```
 > npm install -g meteor
-> meteor update
+```
+
+This will install Meteor as a global module
+
+#### Updating Meteor-specific modules
+
+To ensure all Meteor-specific modules are up-to-date, run the following from the
+command line after installing Meteor:
+
+```
 > mrt update
+```
+
+#### Starting the Meteor app
+
+Now that you have all of the code, and Meteor is installed and up-to-date, run the
+following from a command line to start the Cuda Meteor app:
+
+```
 > meteor --port :portnumber (default port is 3000 - port is optional)
 ```
 You should now have a running Meteor app.
