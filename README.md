@@ -15,6 +15,19 @@ You will need to perform the following steps to use the Cuda repository:
 * Install Meteor
 * Update Meteors-specific modules (e.g., mrt modules)
 
+#### Clone this repository
+To clone this repository, run the following from the command line:
+
+```
+> git clone https://github.com/onenorth/cuda.git
+```
+
+OR via SSH
+
+```
+> git clone git@github.com:onenorth/cuda.git
+```
+
 #### Cloning and initializing submodules
 To clone and initialize any required submodules, run the following command from
 the command line after you clone the repository:
@@ -34,12 +47,12 @@ To install Meteor, run the following command from the command line:
 > npm install -g meteor
 ```
 
-This will install Meteor as a global module
+This will install Meteor as a global npm module
 
 #### Updating Meteor-specific modules
 
-To ensure all Meteor-specific modules are up-to-date, run the following from the
-command line after installing Meteor:
+Now, you need to ensure all Meteor-specific modules are up-to-date. After you've
+installed Meteor, run the following from the command line:
 
 ```
 > mrt update
