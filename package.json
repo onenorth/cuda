@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/onenorth/cuda/issues"
   },
-  "homepage": "https://github.com/onenorth/cuda"
+  "homepage": "https://github.com/onenorth/cuda",
+  "dependencies": {
+    "meteor-npm": "~0.1.10"
+  }
 }

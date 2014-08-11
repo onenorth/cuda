@@ -28,6 +28,9 @@ OR via SSH
 > git clone git@github.com:onenorth/cuda.git
 ```
 
+>> NOTE: Everything that follows in this document assumes that you first navigate to the project
+directory in your terminal, thereby you will execute all commmands within the repo project directory
+
 #### Cloning and initializing submodules
 To clone and initialize any required submodules, run the following command from
 the command line after you clone the repository:
@@ -56,6 +59,13 @@ installed Meteor, run the following from the command line:
 
 ```
 > mrt update
+```
+#### Using npm modules inside Meteor
+If you want to use npm modules inside of Meteor, you will need to ensure that you've run
+the following from the command line before you attempt to reference any npm modules in the app:
+
+```
+> meteor-npm #type inside your project
 ```
 
 #### Starting the Meteor app
