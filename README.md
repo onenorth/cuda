@@ -11,7 +11,7 @@ Getting Started
 You will need to perform the following steps to use the Cuda repository:
 
 * Clone this repository
-* Clone and initialize all submodules
+* Run npm install
 * Install Meteor
 * Update Meteor-specific modules (e.g., mrt modules)
 
