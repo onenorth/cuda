@@ -2,3 +2,5 @@ standard-app-packages
 iron-router
 accounts-ui
 meteor-accounts-ui
+iron-router-progress
+spin
