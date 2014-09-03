@@ -1,0 +1,59 @@
+<template name="searchFilters">
+
+	<h3>Inputs</h3>
+	<label for="VSiteId">VSite Id</label>
+	<select name="VSiteId" id="VSiteId">
+		<option value="">select one</option>
+	{{#each vSiteList}}
+		<option value="{{id}}">{{name}}</option>
+	{{/each}}
+	</select> <br>
+
+{{#if selectedVSite}}
+	<label for="ServiceGroupId">Service Group Id</label>
+	<select name="ServiceGroupId" id="ServiceGroupId">
+		<option value="">select one</option>
+	{{#each serviceGroupList}}
+		<option value="{{id}}">{{name}}</option>
+	{{/each}}
+	</select> <br>
+{{/if}}
+
+{{#if selectedServiceGroup}}
+	<label for="VirtualServiceId">Virtual Service Id</label>
+	<select name="VirtualServiceId" id="VirtualServiceId">
+		<option value="">select one</option>
+	{{#each virtualServiceList}}
+		<option value="{{id}}">{{name}}</option>
+	{{/each}}
+	</select>  <br>
+{{/if}}
+
+{{#if selectedVirtualService}}
+	<label for="ServerId">Server Id</label>
+	<select name="ServerId" id="ServerId">
+		<option value="">select one</option>
+	{{#each serverList}}
+		<option value="{{id}}">{{name}}</option>
+	{{/each}}
+	</select>  <br>
+
+	<label for="ContentRuleId">Content Rule Id</label>
+	<select name="ContentRuleId" id="ContentRuleId">
+		<option value="">select one</option>
+	{{#each contentRuleList}}
+		<option value="{{id}}">{{name}}</option>
+	{{/each}}
+	</select>  <br>
+{{/if}}
+
+{{#if selectedContentRule}}
+	<label for="RuleGroupServerId">Rule Group Server Id</label>
+	<select name="RuleGroupServerId" id="RuleGroupServerId">
+		<option value="">select one</option>
+	{{#each ruleGroupList}}
+		<option value="{{id}}">{{name}}</option>
+	{{/each}}
+	</select>  <br>
+{{/if}}
+</template>

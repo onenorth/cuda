@@ -1,0 +1,11 @@
+.alpha {
+	float: left;
+}
+.omega {
+	float: right;
+}
+
+.container-full {
+	width: 100%;
+	margin: 0 auto;
+}

@@ -1,8 +1,9 @@
 standard-app-packages
 iron-router
 accounts-ui
-meteor-accounts-ui
 iron-router-progress
 spin
 service-configuration
 accounts-password
+http
+bootstrap

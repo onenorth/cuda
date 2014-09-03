@@ -1,0 +1,70 @@
+<template name="editContentRule">
+{{#if hasData}}
+	<form role="form" class="alpha">
+		<legend>Update Content Rule</legend>
+		
+		<div class="form-group">
+			<label for="id">Id</label>
+			<span>{{id}}</span>
+		</div>
+		
+		<div class="form-group">
+			<label for="name">Name</label>
+			<span>{{name}}</span>
+		</div>
+
+		<div class="form-group">
+			<label for="hostMatch">Host Match</label>
+			<textarea name="hostMatch" id="hostMatch">{{host_match}}</textarea>
+		</div>
+
+		<div class="form-group">
+			<label for="extendedMatch">Extended Match</label>
+			<textarea name="extendedMatch" id="extendedMatch">{{extended_match}}</textarea>	
+		</div>
+
+		<div class="form-group">
+			<label for="extendedMatchSequence">Extended Match Sequence</label>
+			<input name="extendedMatchSequence" id="extendedMatchSequence" type="text" value="{{extended_match_sequence}}">	
+		</div>
+
+		<div class="form-group">
+			<label for="serviceName">Service Name</label>
+			<input name="serviceName" id="serviceName" value="{{service_name}}" type="text">
+		</div>
+
+		<div class="form-group">
+			<label for="urlMatch">urlMatch</label>
+			<input name="urlMatch" id="urlMatch" value="{{url_match}}" type="text">
+		</div>
+
+		<div class="form-group">
+			<label for="status">Status</label>
+			<input name="status" id="status" value="{{status}}" type="text">
+		</div>
+
+		<div class="form-group">
+			<label for="servers">Servers</label>
+			<select name="servers" id="servers">
+				{{#each servers}}
+					<option value="{{id}}">{{id}}</option>
+				{{/each}}
+			</select>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group">
+				<label for=""></label>
+				<input type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="comments">Comments</label>
+			<textarea name="comments" id="comments">{{comments}}</textarea>
+		</div>
+	
+		<button type="submit" class="btn btn-primary">Update</button>
+	</form>
+{{/if}}
+</template>
