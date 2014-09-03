@@ -1,0 +1,541 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"login",
+				"loginAsAdmin"
+			],
+			[
+				"vali",
+				"validateSuggest"
+			],
+			[
+				"sugg",
+				"suggestHaystack"
+			],
+			[
+				"Colu",
+				"CloudinaryImage"
+			],
+			[
+				"azure",
+				"azurefileconfig"
+			],
+			[
+				"crea",
+				"createContainerIfNotExists"
+			],
+			[
+				"contain",
+				"containerFormatter"
+			],
+			[
+				"Profe",
+				"ProfessionalType"
+			],
+			[
+				"resp",
+				"respJSON"
+			],
+			[
+				"stats",
+				"statuscode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 368.0,
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"intsall",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"jshin",
+				"JSHint"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"syntax: js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"gist",
+				"GitHub: Open Gist in Editor"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"fake",
+				"Snippet: fakeimg"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Chris/Projects/cuda"
+	],
+	"file_history":
+	[
+		"/Users/Chris/Downloads/askesian.rdp",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/javascripts/ui_experiments_banner4.js",
+		"/Users/Chris/.dotfiles/zsh/zshrc.symlink",
+		"/Users/Chris/.dotfiles/git/gitconfig.symlink",
+		"/Users/Chris/.dotfiles/zsh/aliases.zsh",
+		"/Users/Chris/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Chris/Projects/herokujg/joingiving/Gemfile",
+		"/Users/Chris/Projects/herokujg/joingiving/config/routes.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/config/application.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_4.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/controllers/ui_experiments_controller.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/controllers/application_controller.rb",
+		"/Users/Chris/Downloads/iconmelon-4fc24902fa0d82d93177a0606e78028c/icons.svg",
+		"/Users/Chris/Projects/herokujg/joingiving/spec/spec_helper.rb",
+		"/Users/Chris/Downloads/iconmelon-4fc24902fa0d82d93177a0606e78028c/index.html",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/confirmation2.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_confirmation_cart_banner_unseen.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/ui_experiments_banner4.css.scss",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_banner.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/spec/controllers/ui_experiments_controller_spec.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/iframe_banner4.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/index.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/confirmation.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/ui_experiments.css.scss",
+		"/Users/Chris/Downloads/iconmelon-4fc24902fa0d82d93177a0606e78028c/icons.css",
+		"/Users/Chris/Downloads/jquery-editable-1.5.1/jquery-editable/js/jquery-editable-poshytip.js",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/javascripts/ui_experiments_banner3.js",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/ui_experiments_banner3.css.scss",
+		"/Users/Chris/Downloads/poshytip-1.2/src/tip-twitter/tip-twitter.css",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_banner_3.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/iframe_banner3.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_banner_4.html.haml",
+		"/Users/Chris/Projects/cuda/lib/router.js",
+		"/Users/Chris/Projects/cuda/client/helpers/config.js",
+		"/Users/Chris/Projects/cuda/client/views/application/layout.html",
+		"/Users/Chris/Projects/cuda/client/views/includes/header.html",
+		"/Users/Chris/Projects/cuda/client/views/home.html",
+		"/Users/Chris/Projects/herokujg/joingiving/tmp/pids/server.pid",
+		"/Users/Chris/Projects/cuda/client/views/includes/login.html",
+		"/Users/Chris/Projects/cuda/client/views/includes/login.js",
+		"/Users/Chris/Projects/cuda/collections/notifications.js",
+		"/Users/Chris/Projects/cuda/client/views/notifications/notifications.js",
+		"/Users/Chris/Projects/cuda/client/client.js",
+		"/Users/Chris/Projects/cuda/client/routes.js",
+		"/Users/Chris/Projects/cuda/client/lib/subscriptions.js",
+		"/Users/Chris/Projects/cuda/client/views/includes/access_denied.html",
+		"/Users/Chris/Projects/cuda/client/views/notifications/notifications.html",
+		"/Users/Chris/Projects/cuda/lib/collections.js",
+		"/Users/Chris/Projects/cuda/client/views/login.html",
+		"/Users/Chris/Projects/cuda/client/views/layout.html",
+		"/Users/Chris/Projects/cuda/client/main.html",
+		"/Users/Chris/Projects/cuda/client/views/common/loading.html",
+		"/Users/Chris/Projects/cuda/client/views/includes/loading.html",
+		"/Users/Chris/Projects/cuda/client/views/includes/header.js",
+		"/Users/Chris/Projects/cuda/client/views/includes/errors.html",
+		"/Users/Chris/Projects/cuda/client/views/includes/errors.js",
+		"/Users/Chris/Projects/cuda/client/helpers/errors.js",
+		"/Users/Chris/Projects/cuda/client/helpers/handlebars.js",
+		"/Users/Chris/Projects/cuda/client/views/home.js",
+		"/Users/Chris/Projects/cuda/packages/meteor-accounts-ui/ldap-client.js",
+		"/Users/Chris/Projects/cuda/packages/meteor-accounts-ui/login-handler.js",
+		"/Users/Chris/Projects/cuda/packages/meteor-accounts-ui/accounts_ui.js",
+		"/Users/Chris/Projects/cuda/client/views/admin.html",
+		"/Users/Chris/Projects/cuda/client/views/admin.js",
+		"/Users/Chris/Projects/cuda/package.json",
+		"/Users/Chris/Projects/cuda/packages.json",
+		"/Users/Chris/Projects/cuda/.meteor/release",
+		"/Users/Chris/Projects/cuda/.meteor/packages",
+		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/node_modules/rimraf/bin.js",
+		"/Users/Chris/Projects/cuda/packages/npm/package.js",
+		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/index.js",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/server/app/node_modules/usage/lib/providers/index.js",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/server/program.json",
+		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/package.js",
+		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/smart.json",
+		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/package.json",
+		"/Users/Chris/Projects/cuda/packages/meteor-accounts-ui/package.js",
+		"/Users/Chris/Projects/cuda/README.md",
+		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/node_modules/rimraf/rimraf.js",
+		"/Users/Chris/Projects/cuda/.git/config",
+		"/Users/Chris/Projects/cuda/.gitmodules",
+		"/Users/Chris/Projects/cuda/node_modules/meteor-accounts-ldap/package.json",
+		"/Users/Chris/Projects/meteor-accounts-ldap/package.json",
+		"/Users/Chris/Projects/cuda/packages/meteor-accounts-ldap/package.js",
+		"/Users/Chris/Projects/cuda/.gitignore",
+		"/Users/Chris/Projects/ldap-test/index.js",
+		"/private/var/folders/v5/9tgz5ht94gndy5psr4y7_qv40000gn/T/npm-34646/1407724359671-0.6542382796760648/package/index.js",
+		"/private/var/folders/v5/9tgz5ht94gndy5psr4y7_qv40000gn/T/npm-28803-rTFgMmCl/github.com/onenorth/meteor-accounts-ldap.git-unpack/index.js",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/iframe.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/javascripts/ui_experiments/jquery.suggest.js",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/quickview.js.erb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_quickview.html.erb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/javascripts/ui_experiments.js",
+		"/Users/Chris/Projects/herokujg/joingiving/config/initializers/mime_types.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/controllers/quickview_controller.html.erb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_confirmation_cart_banner_seen.html.haml",
+		"/Users/Chris/Downloads/choneungryeokja.(2010).eng.1cd.(4427068)/Haunters.2010.Blu-ray.720p.x264.DTS.MySilu.srt",
+		"/Users/Chris/Downloads/Haunters.srt",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_3.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_2.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/iframe_banner2.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/javascripts/ui_experiments_banner2.js",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_banner_2.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/ui_experiments_banner2.css.scss",
+		"/Users/Chris/Downloads/Harness/Harness.js",
+		"/Users/Chris/Downloads/Harness/Harness.min.js",
+		"/Users/Chris/Documents/base64_social_icons.txt",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/api/page.css.scss",
+		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/api/page.css",
+		"/private/etc/hosts",
+		"/Library/Preferences/VMware Fusion/vmnet8/nat.mac",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/jgframe.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_container.js.erb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/ui_experiments_helper.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/.git/config",
+		"/Users/Chris/Projects/joingiving/app.js",
+		"/Users/Chris/Projects/herokujg/joingiving/app/controllers/home_controller.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/controllers/banners_controller.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/home_helper.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/config/secrets.yml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_base.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/application_helper.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/banner_helper.rb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/api/visits/module_container.js.erb",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_1.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner.html.haml",
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/uiexp_banner.html.erb"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 154.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"log",
+			"glog",
+			"git",
+			"loadCharities",
+			"org-group",
+			"card--solo",
+			"card--solor",
+			"card--solo",
+			"msg-sample",
+			"card--solo",
+			"card--solor",
+			".org",
+			"theme",
+			"btn--ok",
+			".field",
+			"org-suggest",
+			"poshy",
+			"org",
+			"selected",
+			"on",
+			"charity",
+			"featured-charities",
+			"btn",
+			"showCharities",
+			"choose",
+			"triggerEl",
+			"charity--choose",
+			"purl",
+			"external/purl.js",
+			"banner/sharing_module.js",
+			"<",
+			"font",
+			"charity--choose",
+			"btn",
+			"charity--choose",
+			"chooserPane",
+			"header",
+			"JsonToHtmlSelect",
+			"JsonToHtmlList",
+			"localhost:3000",
+			"featuredEl",
+			"choser2",
+			"selector2",
+			"appendChild",
+			"querySelectorAll",
+			"init",
+			"clear",
+			"clear-fix",
+			"clearfix",
+			"featuredEl",
+			"featured-charities",
+			".branding",
+			"media",
+			"featured-charities",
+			"!\n",
+			"cecece",
+			"showCharities",
+			"choose",
+			"charityChoose",
+			"chooserPane",
+			"choosePane",
+			"charity-pane",
+			"hover",
+			"choose",
+			"charity-pan",
+			"default_host_and_port",
+			"experiment_container_url",
+			"module_container_url",
+			"module_container",
+			"querySelectorAll",
+			"javascript_include_tag",
+			"module_container_url",
+			"Rails.application.secrets",
+			"default_host_and_port",
+			"module_container_url",
+			"module_container",
+			"cart_banner",
+			"cart_banner.html.erb",
+			"module_container",
+			"iframe.html",
+			"iframe.html.haml",
+			"module_container.js",
+			"toggle",
+			"addEvent",
+			"button",
+			"charity",
+			"zui-table",
+			"jgBox",
+			"logger",
+			"if(keystone.get('logger'",
+			"var sort",
+			"processFilters",
+			"prefix",
+			"ops.operator",
+			"get_ruby",
+			"get_rub",
+			"Source",
+			"renderFn",
+			"renderFn.length",
+			"mongoConnectionOpen",
+			"console",
+			"console.log",
+			"upcase",
+			"console.log",
+			"==",
+			"console.log",
+			"\"Types\"",
+			"\"parent\"",
+			"'parent'",
+			"\"parent\"",
+			"console.log",
+			"c",
+			"console.log",
+			"underscoreMethod",
+			"\"",
+			"upcase",
+			"ucase",
+			"rray.isArray(obj.geo) && obj.geo[0] === null && obj.geo[1] === null",
+			"Array.isArray(obj.geo) && 0 === obj.geo.length",
+			"initApi",
+			"schemaPlu",
+			"schemaPlugi",
+			"Practice",
+			"Event",
+			"matchit",
+			"handlebars",
+			"vitality",
+			"surround"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 54.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "cuda.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"mo",
+				"app/views/api/visits/module_container.js.erb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Projects/keystone-demo/keystone-demo.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 384.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,50 +1,53 @@
-var baseApiUrl = "",
-	aUsername  = "",
-	aPassword  = "",
-	userkey    = null,
-	authHeader = null;
-	
+var config,
+		userkey    = null,
+		authHeader = null;
+
 DEBUG = -1; //true activates server-side debuggin
 
 //Hide server-side console debugging behind a flag
-debugLog = (DEBUG > -1) ? 
+debugLog = (DEBUG > -1) ?
 	function(importance){ if(DEBUG === importance || DEBUG === Infinity) console.log.apply(this, [].splice.call(arguments,1)); } :
 	function(){};
 
 //Many of our requests will look the same, so we can handle them genericaly
 function handleApiRequest(url, method, options, attempt) {
-	var res = Meteor.http.call((method || 'GET'), baseApiUrl + url, (options || {auth : authHeader}));
+	var res = Meteor.http.call((method || 'GET'), config.wafApiUrl + url, (options || {auth : authHeader}));
 	debugLog(2, 'Status:', res.statusCode, '\nContent:', res.content, '\nData:', JSON.stringify(res.data));
 	return res.data;
 }
 
 //This authentication will be sent along with requests
 function buildAuthHeader(){
-	authHeader = userkey + ":" + aPassword;
+	authHeader = userkey + ":" + config.wafPassword;
 }
 
 //Call this at start and whenever our user session expires
 function getAuthKey() {
-	userkey = handleApiRequest('login', 'POST', { data: { username: aUsername, password: aPassword } }).token;
+	userkey = handleApiRequest('login', 'POST', { data: { username: config.wafUsername, password: config.wafPassword } }).token;
 	debugLog(2, "UserKey:", userkey);
-	buildAuthHeader();	
+	buildAuthHeader();
 }
 
 Meteor.startup(function () {
-//When server starts, request login and get userkey that will allow us to hit REST API
-	//getAuthKey();
-	// VSites.remove({});
-	// ServiceGroups.remove({});
-	// VirtualServices.remove({});
-	// Servers.remove({});
-	// ContentRules.remove({});
-	// RuleGroupServers.remove({});
-	// Meteor.call('queryVSites');
-	// parseSettings();
+
+	config = JSON.parse(Assets.getText('waf.config.json'));
+
+	if ( !config.useVPN) { return; }
+
+	//When server starts, request login and get userkey that will allow us to hit REST API
+	getAuthKey();
+	VSites.remove({});
+	ServiceGroups.remove({});
+	VirtualServices.remove({});
+	Servers.remove({});
+	ContentRules.remove({});
+	RuleGroupServers.remove({});
+	Meteor.call('queryVSites');
+	parseSettings();
 });
 
 function parseSettings() {
-	var data = {}, 
+	var data = {},
 		settings = siteSettings.find();
 
 		if(settings.count() > 0) {
@@ -52,7 +55,7 @@ function parseSettings() {
 			parseVSites(data);
 		}
 		else
-			debugLog(0, "No WAF settings.");	
+			debugLog(0, "No WAF settings.");
 }
 
 function parseVSites(data) {
@@ -103,7 +106,7 @@ function insertVirtualServices(vs) {
 		service_hostname: [],   //array
 		advanced_configuration: vs.advanced_configuration,   //object
 		certificate: vs.certificate,
-		status: vs.status,   
+		status: vs.status,
 		session_timeout: vs.session_timeout,
 		instant_ssl: vs.instant_ssl,   //object
 		comments: vs.comments,
@@ -157,7 +160,7 @@ function insertContentRules(cr) {
 		d.servers.push(i.id);
 		RuleGroupServers.insert(i);
 	});
-	
+
 	ContentRules.insert(d);
 }
 
@@ -170,32 +173,32 @@ Meteor.methods({
 		debugLog(1, "mongo id: ", id);
 	},
 	queryServiceGroups: function(vSiteId, serviceGroupId) {
-		return handleApiRequest('vsites/' 
-			+ (vSiteId || '') 
-			+ '/service_groups' 
+		return handleApiRequest('vsites/'
+			+ (vSiteId || '')
+			+ '/service_groups'
 			+ ( serviceGroupId ? '/' + serviceGroupId : '' ));
 	},
 	queryVirtualServices: function() {
 		return handleApiRequest('virtual_services');
 	},
 	queryServers: function(virtualServiceId, serverId) {
-		return handleApiRequest('virtual_services/' 
-			+ (virtualServiceId || 'HTTP') 
-			+ '/servers' 
+		return handleApiRequest('virtual_services/'
+			+ (virtualServiceId || 'HTTP')
+			+ '/servers'
 			+ ( serverId ? '/' + serverId : '' ));
 	},
 	queryContentRules: function(virtualServiceId, contentRuleId) {
-		return handleApiRequest('virtual_services/' 
-			+ (virtualServiceId || 'HTTP') 
-			+ '/content_rules' 
+		return handleApiRequest('virtual_services/'
+			+ (virtualServiceId || 'HTTP')
+			+ '/content_rules'
 			+ ( contentRuleId ? '/' + contentRuleId : '' ));
 	},
 	queryRuleGroupServers: function(virtualServiceId, contentRuleId, contentRuleGroupServerId) {
-		return handleApiRequest('virtual_services/' 
-			+ (virtualServiceId || 'HTTP') 
-			+ '/content_rules' 
-			+ ( contentRuleId || '' ) 
-			+ '/rg_servers' 
+		return handleApiRequest('virtual_services/'
+			+ (virtualServiceId || 'HTTP')
+			+ '/content_rules'
+			+ ( contentRuleId || '' )
+			+ '/rg_servers'
 			+ (contentRuleGroupServerId ? '/' + contentRuleGroupServerId : ''));
 	}
 });

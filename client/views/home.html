@@ -1,9 +1,8 @@
 <template name="home">
   <div class="container-full">
     <div class="jumbotron">
-      <h1>Welcome to Cuda</h1>
       {{#if currentUser}}
-        {{> dashboard}}
+      <h1>Welcome to Cuda</h1>
       {{else}}
         {{> login}}
       {{/if}}
