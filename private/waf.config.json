@@ -1,6 +1,0 @@
-{
-  "wafApiUrl": "http://at-waf-primary-1.admin.onenorth.com:8000/restapi/v1/",
-  "wafUsername": "admin",
-  "wafPassword": "admin",
-  "useVPN": "false"
-}

@@ -1,0 +1,15 @@
+{
+  "servers": [{
+    "host": "http://at-waf-primary-1.admin.onenorth.com",
+    "port": "8000",
+    "path": "/restapi/v1/",
+    "username": "admin",
+    "password": "admin"
+  }],
+
+  "env": {
+    "ROOT_URL": "http://rooturlofmeteorsite.com"
+  },
+
+  "useVpn": "false"
+}

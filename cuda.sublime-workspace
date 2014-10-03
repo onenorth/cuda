@@ -47,6 +47,102 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/views/home.html",
+			"settings":
+			{
+				"buffer_size": 687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/application/layout.html",
+			"settings":
+			{
+				"buffer_size": 121,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/editingForms/editContentRule.html",
+			"settings":
+			{
+				"buffer_size": 2272,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/requestforms/sub/searchFilters.html",
+			"settings":
+			{
+				"buffer_size": 1968,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/editingForms/editContentRule.js",
+			"settings":
+			{
+				"buffer_size": 1184,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/includes/header.html",
+			"settings":
+			{
+				"buffer_size": 609,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/styles/theme.css",
+			"settings":
+			{
+				"buffer_size": 882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/router.js",
+			"settings":
+			{
+				"buffer_size": 2563,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/auth/login.html",
+			"settings":
+			{
+				"buffer_size": 292,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/helpers/handlebars.js",
+			"settings":
+			{
+				"buffer_size": 184,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/views/includes/header.js",
+			"settings":
+			{
+				"buffer_size": 313,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "private/waf.json",
+			"settings":
+			{
+				"buffer_size": 267,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -152,10 +248,56 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Chris/Projects/cuda"
+		"/Users/Chris/Projects/cuda",
+		"/Users/Chris/Projects/cuda/client",
+		"/Users/Chris/Projects/cuda/client/helpers",
+		"/Users/Chris/Projects/cuda/client/lib",
+		"/Users/Chris/Projects/cuda/client/views",
+		"/Users/Chris/Projects/cuda/client/views/application",
+		"/Users/Chris/Projects/cuda/client/views/auth",
+		"/Users/Chris/Projects/cuda/lib",
+		"/Users/Chris/Projects/cuda/lib/collections",
+		"/Users/Chris/Projects/cuda/private",
+		"/Users/Chris/Projects/cuda/server"
 	],
 	"file_history":
 	[
+		"/Users/Chris/.meteor.bak/packages/mrt:accounts-t9n/.0.0.13.14clfjo++os+web.browser+web.cordova/os/packages/mrt:accounts-t9n.js",
+		"/Users/Chris/.meteor.bak/packages/mrt:accounts-t9n/.0.0.13.14clfjo++os+web.browser+web.cordova/web.cordova.json",
+		"/Users/Chris/.meteor/packages/splendido:accounts-templates-core/.0.0.24.jsqnsf++os+web.browser+web.cordova/web.browser/packages/splendido:accounts-templates-core.js",
+		"/Users/Chris/.meteor/packages/splendido:accounts-templates-semantic-ui/.0.0.24.63nmre++os+web.browser+web.cordova/web.browser/packages/splendido:accounts-templates-semantic-ui.js",
+		"/Users/Chris/.meteorite/packages/accounts-t9n/softwarerero/meteor-accounts-t9n/d1710f979d6955459d9ce0374df81d22c3c6a6ab/.build/browser/packages/accounts-t9n.js",
+		"/Users/Chris/.meteor.bak/packages/handlebars/.1.0.0.h2c4ut++os+web.browser+web.cordova/web.browser/packages/handlebars.js",
+		"/Users/Chris/.meteor.bak/packages/handlebars/.1.0.0.h2c4ut++os+web.browser+web.cordova/os/packages/handlebars.js",
+		"/Users/Chris/.meteorite/packages/accounts-t9n/softwarerero/meteor-accounts-t9n/d1710f979d6955459d9ce0374df81d22c3c6a6ab/smart.json",
+		"/Users/Chris/.meteorite/packages/accounts-t9n/softwarerero/meteor-accounts-t9n/d1710f979d6955459d9ce0374df81d22c3c6a6ab/package.js",
+		"/Users/Chris/Projects/cuda/cuda.sublime-project",
+		"/Users/Chris/Projects/cuda/packages.json",
+		"/Users/Chris/Projects/cuda/server/server.js",
+		"/Users/Chris/Projects/cuda/lib/at_config.js",
+		"/Users/Chris/Projects/cuda/client/views/dashboard/dashboard.js",
+		"/Users/Chris/Projects/cuda/client/views/includes/login.html",
+		"/Users/Chris/Projects/cuda/client/views/dashboard.html",
+		"/Users/Chris/Projects/cuda/client/views/templates/templates.html",
+		"/Users/Chris/Projects/cuda/.meteor/packages",
+		"/Users/Chris/Projects/cuda/client/views/includes/errors.html",
+		"/Users/Chris/Projects/cuda/client/views/application/layout.html",
+		"/Users/Chris/Projects/cuda/lib/router.js",
+		"/Users/Chris/Projects/cuda/client/helpers/config.js",
+		"/Users/Chris/Projects/cuda/packages/npm/package.js",
+		"/Users/Chris/Projects/cuda/private/waf.json",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/ctl/node_modules/request/dns-request.js",
+		"/Users/Chris/Projects/cuda/packages/iron-router/.build/npm/node_modules/connect/lib/middleware/query.js",
+		"/Users/Chris/Projects/cuda/packages/iron-router/.npm/package/node_modules/connect/lib/middleware/query.js",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/ctl/node_modules/request/request.js",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/ctl/node_modules/request/README.md",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/ctl/node_modules/source-map-support/amd-test/require.js",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/ctl/node_modules/esprima/assets/require.js",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/client/app/client/views/requestforms/sub/template.requestforms.js",
+		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/client/app/client/views/requestforms/sub/requestforms.js",
+		"/Users/Chris/Projects/cuda/client/views/requestforms/sub/requestforms.js",
+		"/Users/Chris/Projects/cuda/client/views/requestforms/sub/requestforms.html",
+		"/Users/Chris/Projects/cuda/README.md",
 		"/Users/Chris/Downloads/askesian.rdp",
 		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
 		"/Users/Chris/Projects/herokujg/joingiving/app/assets/javascripts/ui_experiments_banner4.js",
@@ -189,13 +331,9 @@
 		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_banner_3.html.haml",
 		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/iframe_banner3.html.haml",
 		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_banner_4.html.haml",
-		"/Users/Chris/Projects/cuda/lib/router.js",
-		"/Users/Chris/Projects/cuda/client/helpers/config.js",
-		"/Users/Chris/Projects/cuda/client/views/application/layout.html",
 		"/Users/Chris/Projects/cuda/client/views/includes/header.html",
 		"/Users/Chris/Projects/cuda/client/views/home.html",
 		"/Users/Chris/Projects/herokujg/joingiving/tmp/pids/server.pid",
-		"/Users/Chris/Projects/cuda/client/views/includes/login.html",
 		"/Users/Chris/Projects/cuda/client/views/includes/login.js",
 		"/Users/Chris/Projects/cuda/collections/notifications.js",
 		"/Users/Chris/Projects/cuda/client/views/notifications/notifications.js",
@@ -211,7 +349,6 @@
 		"/Users/Chris/Projects/cuda/client/views/common/loading.html",
 		"/Users/Chris/Projects/cuda/client/views/includes/loading.html",
 		"/Users/Chris/Projects/cuda/client/views/includes/header.js",
-		"/Users/Chris/Projects/cuda/client/views/includes/errors.html",
 		"/Users/Chris/Projects/cuda/client/views/includes/errors.js",
 		"/Users/Chris/Projects/cuda/client/helpers/errors.js",
 		"/Users/Chris/Projects/cuda/client/helpers/handlebars.js",
@@ -222,11 +359,8 @@
 		"/Users/Chris/Projects/cuda/client/views/admin.html",
 		"/Users/Chris/Projects/cuda/client/views/admin.js",
 		"/Users/Chris/Projects/cuda/package.json",
-		"/Users/Chris/Projects/cuda/packages.json",
 		"/Users/Chris/Projects/cuda/.meteor/release",
-		"/Users/Chris/Projects/cuda/.meteor/packages",
 		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/node_modules/rimraf/bin.js",
-		"/Users/Chris/Projects/cuda/packages/npm/package.js",
 		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/index.js",
 		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/server/app/node_modules/usage/lib/providers/index.js",
 		"/Users/Chris/Projects/cuda/.meteor/local/build/programs/server/program.json",
@@ -234,7 +368,6 @@
 		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/smart.json",
 		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/package.json",
 		"/Users/Chris/Projects/cuda/packages/meteor-accounts-ui/package.js",
-		"/Users/Chris/Projects/cuda/README.md",
 		"/Users/Chris/Projects/cuda/node_modules/meteor-npm/node_modules/rimraf/rimraf.js",
 		"/Users/Chris/Projects/cuda/.git/config",
 		"/Users/Chris/Projects/cuda/.gitmodules",
@@ -256,34 +389,7 @@
 		"/Users/Chris/Downloads/choneungryeokja.(2010).eng.1cd.(4427068)/Haunters.2010.Blu-ray.720p.x264.DTS.MySilu.srt",
 		"/Users/Chris/Downloads/Haunters.srt",
 		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_3.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_2.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/iframe_banner2.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/assets/javascripts/ui_experiments_banner2.js",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/_banner_2.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/ui_experiments_banner2.css.scss",
-		"/Users/Chris/Downloads/Harness/Harness.js",
-		"/Users/Chris/Downloads/Harness/Harness.min.js",
-		"/Users/Chris/Documents/base64_social_icons.txt",
-		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/api/page.css.scss",
-		"/Users/Chris/Projects/herokujg/joingiving/app/assets/stylesheets/api/page.css",
-		"/private/etc/hosts",
-		"/Library/Preferences/VMware Fusion/vmnet8/nat.mac",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/jgframe.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_container.js.erb",
-		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/ui_experiments_helper.rb",
-		"/Users/Chris/Projects/herokujg/joingiving/.git/config",
-		"/Users/Chris/Projects/joingiving/app.js",
-		"/Users/Chris/Projects/herokujg/joingiving/app/controllers/home_controller.rb",
-		"/Users/Chris/Projects/herokujg/joingiving/app/controllers/banners_controller.rb",
-		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/home_helper.rb",
-		"/Users/Chris/Projects/herokujg/joingiving/config/secrets.yml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_base.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/application_helper.rb",
-		"/Users/Chris/Projects/herokujg/joingiving/app/helpers/banner_helper.rb",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/api/visits/module_container.js.erb",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_1.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner.html.haml",
-		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/uiexp_banner.html.erb"
+		"/Users/Chris/Projects/herokujg/joingiving/app/views/ui_experiments/banner_2.html.haml"
 	],
 	"find":
 	{
@@ -302,6 +408,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"must be logged in",
+			"rule",
+			"Accounts.ui.config",
+			"loginbuttons",
 			"log",
 			"glog",
 			"git",
@@ -425,11 +535,7 @@
 			"schemaPlu",
 			"schemaPlugi",
 			"Practice",
-			"Event",
-			"matchit",
-			"handlebars",
-			"vitality",
-			"surround"
+			"Event"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -447,8 +553,532 @@
 	"groups":
 	[
 		{
+			"selected": 7,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/views/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/views/application/layout.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31,
+								31
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/views/editingForms/editContentRule.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/views/requestforms/sub/searchFilters.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1968,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								131
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/views/editingForms/editContentRule.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								756,
+								756
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 129.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/views/includes/header.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/styles/theme.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 882,
+						"regions":
+						{
+							"gutter_color_163":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#FCFCFC.png",
+								"regions":
+								[
+									[
+										541,
+										563
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_186":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#555.png",
+								"regions":
+								[
+									[
+										564,
+										578
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_210":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/rgba(0, 0, 0, 0.004).png",
+								"regions":
+								[
+									[
+										482,
+										530
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_292":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/rgba(0, 0, 0, 0.004).png",
+								"regions":
+								[
+									[
+										482,
+										530
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_351":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#FCFCFC.png",
+								"regions":
+								[
+									[
+										541,
+										563
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_374":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#555.png",
+								"regions":
+								[
+									[
+										564,
+										578
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_482":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/rgba(0, 0, 0, 0.004).png",
+								"regions":
+								[
+									[
+										482,
+										530
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_541":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#FCFCFC.png",
+								"regions":
+								[
+									[
+										541,
+										563
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_564":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#555.png",
+								"regions":
+								[
+									[
+										564,
+										578
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_66":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#555.png",
+								"regions":
+								[
+									[
+										564,
+										578
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_85":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#555.png",
+								"regions":
+								[
+									[
+										564,
+										578
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_863":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#00B9F0.png",
+								"regions":
+								[
+									[
+										863,
+										880
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								879,
+								879
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 389.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "lib/router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2563,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2398,
+								2398
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "client/views/auth/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								245
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "client/helpers/handlebars.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "client/views/includes/header.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "private/waf.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
 			]
 		}
 	],

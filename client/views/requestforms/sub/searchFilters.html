@@ -1,59 +1,77 @@
 <template name="searchFilters">
 
-	<h3>Inputs</h3>
-	<label for="VSiteId">VSite Id</label>
-	<select name="VSiteId" id="VSiteId">
-		<option value="">select one</option>
-	{{#each vSiteList}}
-		<option value="{{id}}">{{name}}</option>
-	{{/each}}
-	</select> <br>
+	<div class="ui large fluid form segment">
 
-{{#if selectedVSite}}
-	<label for="ServiceGroupId">Service Group Id</label>
-	<select name="ServiceGroupId" id="ServiceGroupId">
-		<option value="">select one</option>
-	{{#each serviceGroupList}}
-		<option value="{{id}}">{{name}}</option>
-	{{/each}}
-	</select> <br>
-{{/if}}
+		<h3 class="ui dividing header">Choose a content rule</h3>
 
-{{#if selectedServiceGroup}}
-	<label for="VirtualServiceId">Virtual Service Id</label>
-	<select name="VirtualServiceId" id="VirtualServiceId">
-		<option value="">select one</option>
-	{{#each virtualServiceList}}
-		<option value="{{id}}">{{name}}</option>
-	{{/each}}
-	</select>  <br>
-{{/if}}
+		<div class="field">
+			<label for="VSiteId">VSite Id</label>
+			<select name="VSiteId" id="VSiteId">
+				<option value="">select one</option>
+			{{#each vSiteList}}
+				<option value="{{id}}">{{name}}</option>
+			{{/each}}
+			</select>
+		</div>
 
-{{#if selectedVirtualService}}
-	<label for="ServerId">Server Id</label>
-	<select name="ServerId" id="ServerId">
-		<option value="">select one</option>
-	{{#each serverList}}
-		<option value="{{id}}">{{name}}</option>
-	{{/each}}
-	</select>  <br>
+		{{#if selectedVSite}}
+		<div class="field">
+			<label for="ServiceGroupId">Service Group Id</label>
+			<select name="ServiceGroupId" id="ServiceGroupId">
+				<option value="">select one</option>
+			{{#each serviceGroupList}}
+				<option value="{{id}}">{{name}}</option>
+			{{/each}}
+			</select>
+		</div>
+		{{/if}}
 
-	<label for="ContentRuleId">Content Rule Id</label>
-	<select name="ContentRuleId" id="ContentRuleId">
-		<option value="">select one</option>
-	{{#each contentRuleList}}
-		<option value="{{id}}">{{name}}</option>
-	{{/each}}
-	</select>  <br>
-{{/if}}
+		{{#if selectedServiceGroup}}
+		<div class="field">
+			<label for="VirtualServiceId">Virtual Service Id</label>
+			<select name="VirtualServiceId" id="VirtualServiceId">
+				<option value="">select one</option>
+			{{#each virtualServiceList}}
+				<option value="{{id}}">{{name}}</option>
+			{{/each}}
+			</select>
+		</div>
+		{{/if}}
 
-{{#if selectedContentRule}}
-	<label for="RuleGroupServerId">Rule Group Server Id</label>
-	<select name="RuleGroupServerId" id="RuleGroupServerId">
-		<option value="">select one</option>
-	{{#each ruleGroupList}}
-		<option value="{{id}}">{{name}}</option>
-	{{/each}}
-	</select>  <br>
-{{/if}}
+		{{#if selectedVirtualService}}
+		<div class="field">
+			<label for="ServerId">Server Id</label>
+			<select name="ServerId" id="ServerId">
+				<option value="">select one</option>
+			{{#each serverList}}
+				<option value="{{id}}">{{name}}</option>
+			{{/each}}
+			</select>
+		</div>
+
+		<div class="field">
+			<label for="ContentRuleId">Content Rule Id</label>
+			<select name="ContentRuleId" id="ContentRuleId">
+				<option value="">select one</option>
+			{{#each contentRuleList}}
+				<option value="{{id}}">{{name}}</option>
+			{{/each}}
+			</select>
+		</div>
+		{{/if}}
+
+		{{#if selectedContentRule}}
+		<div class="field">
+			<label for="RuleGroupServerId">Rule Group Server Id</label>
+			<select name="RuleGroupServerId" id="RuleGroupServerId">
+				<option value="">select one</option>
+			{{#each ruleGroupList}}
+				<option value="{{id}}">{{name}}</option>
+			{{/each}}
+			</select>
+		</div>
+		{{/if}}
+
+	</div>
+
 </template>

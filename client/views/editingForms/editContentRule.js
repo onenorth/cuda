@@ -35,8 +35,12 @@ function setFromDatabase(result) {
 		fac.set(key, result[key]);
 }
 
+Template.editContentRule.rendered = function() {
+	$('.ui.dropdown').dropdown();
+}
+
 Template.editContentRule.events({
-	'submit form' : function(evt, tmpl){		
+	'submit form' : function(evt, tmpl){
 		e.preventDefault();
 		var currentPostId = this._id,
 			postProperties = {
@@ -48,6 +52,6 @@ Template.editContentRule.events({
 				Errors.throw(error.reason);
 			else
 				Router.go('postPage', {_id: currentPostId});
-		});	
+		});
 	}
 });

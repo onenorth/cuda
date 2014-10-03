@@ -1,4 +1,4 @@
-var config,
+var wafSettings,
 		userkey    = null,
 		authHeader = null;
 
@@ -11,28 +11,41 @@ debugLog = (DEBUG > -1) ?
 
 //Many of our requests will look the same, so we can handle them genericaly
 function handleApiRequest(url, method, options, attempt) {
-	var res = Meteor.http.call((method || 'GET'), config.wafApiUrl + url, (options || {auth : authHeader}));
+	var endpoint = wafSettings.host + ":" + wafSettings.port + wafSettings.path + url;
+
+	var res = Meteor.http.call((method || 'GET'), endpoint, (options || {auth : authHeader}));
 	debugLog(2, 'Status:', res.statusCode, '\nContent:', res.content, '\nData:', JSON.stringify(res.data));
 	return res.data;
 }
 
 //This authentication will be sent along with requests
 function buildAuthHeader(){
-	authHeader = userkey + ":" + config.wafPassword;
+	authHeader = userkey + ":" + wafSettings.password;
 }
 
 //Call this at start and whenever our user session expires
 function getAuthKey() {
-	userkey = handleApiRequest('login', 'POST', { data: { username: config.wafUsername, password: config.wafPassword } }).token;
+	userkey = handleApiRequest('login', 'POST', { data: { username: wafSettings.username, password: wafSettings.password } }).token;
 	debugLog(2, "UserKey:", userkey);
 	buildAuthHeader();
 }
 
+function getAppSettings() {
+	var settings = JSON.parse(Assets.getText('waf.json'));
+
+	if ( settings ) {
+		return settings.servers[0];
+	}
+
+	return null;
+
+}
+
 Meteor.startup(function () {
 
-	config = JSON.parse(Assets.getText('waf.config.json'));
+	wafSettings = getAppSettings();
 
-	if ( !config.useVPN) { return; }
+	if ( !wafSettings.useVpn) { return; }
 
 	//When server starts, request login and get userkey that will allow us to hit REST API
 	getAuthKey();

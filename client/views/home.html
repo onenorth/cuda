@@ -1,17 +1,29 @@
 <template name="home">
-  <div class="container-full">
-    <div class="jumbotron">
-      <h1>Welcome to Cuda</h1>
-      {{#if currentUser}}
-      <h1>Welcome to Cuda</h1>
-      {{else}}
-        {{> login}}
-      {{/if}}
+  <div class="masthead segment">
+    {{#if currentUser}}
+    <div class="ui page grid">
+      <h1 class="ui header">Welcome to Cuda</h1>
     </div>
-
-	{{#if currentUser}}
-  {{> editContentRule}}
-	{{> requestForms}}
-	{{/if}}
+    {{else}}
+      <!-- {{> login}} -->
+    {{/if}}
   </div>
+
+  {{#if currentUser}}
+  <div class="manage">
+    <div class="ui page grid">
+      <div class="ui column">
+        <h2 class="ui header">Edit Content Rule</h2>
+        <div class="ui stackable relaxed grid">
+          <div class="six wide column">
+           {{> requestForms}}
+          </div>
+          <div class="ten wide column">
+            {{> editContentRule}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
 </template>

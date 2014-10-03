@@ -1,70 +1,88 @@
 <template name="editContentRule">
 {{#if hasData}}
-	<form role="form" class="alpha">
-		<legend>Update Content Rule</legend>
-		
-		<div class="form-group">
-			<label for="id">Id</label>
-			<span>{{id}}</span>
-		</div>
-		
-		<div class="form-group">
-			<label for="name">Name</label>
-			<span>{{name}}</span>
+
+	<form class="ui small fluid form segment" role="form">
+
+		<h3 class="ui dividing header">Rule For: <b class="cta">{{name}}</b></h3>
+
+		<div class="two fields">
+
+			<div class="field">
+				<label for="id">Id</label>
+				<span>{{id}}</span>
+			</div>
+
+			<div class="field">
+				<label for="name">Name</label>
+				<span>{{name}}</span>
+			</div>
+
 		</div>
 
-		<div class="form-group">
+		<div class="inline field">
+			<div class="ui toggle checkbox">
+				<input name="status" id="status" checked="{{status}}" type="checkbox">
+				<label for="status">Status</label>
+			</div>
+		</div>
+
+		<div class="field">
 			<label for="hostMatch">Host Match</label>
 			<textarea name="hostMatch" id="hostMatch">{{host_match}}</textarea>
 		</div>
 
-		<div class="form-group">
+		<div class="field">
 			<label for="extendedMatch">Extended Match</label>
-			<textarea name="extendedMatch" id="extendedMatch">{{extended_match}}</textarea>	
+			<textarea name="extendedMatch" id="extendedMatch">{{extended_match}}</textarea>
 		</div>
 
-		<div class="form-group">
-			<label for="extendedMatchSequence">Extended Match Sequence</label>
-			<input name="extendedMatchSequence" id="extendedMatchSequence" type="text" value="{{extended_match_sequence}}">	
+		<div class="two fields">
+
+			<div class="field">
+				<label for="serviceName">Service Name</label>
+				<input name="serviceName" id="serviceName" value="{{service_name}}" type="text">
+			</div>
+
+			<div class="field">
+				<label for="extendedMatchSequence">Extended Match Sequence</label>
+				<input name="extendedMatchSequence" id="extendedMatchSequence" type="text" value="{{extended_match_sequence}}">
+			</div>
+
 		</div>
 
-		<div class="form-group">
-			<label for="serviceName">Service Name</label>
-			<input name="serviceName" id="serviceName" value="{{service_name}}" type="text">
-		</div>
-
-		<div class="form-group">
+		<div class="field">
 			<label for="urlMatch">urlMatch</label>
 			<input name="urlMatch" id="urlMatch" value="{{url_match}}" type="text">
 		</div>
 
-		<div class="form-group">
-			<label for="status">Status</label>
-			<input name="status" id="status" value="{{status}}" type="text">
-		</div>
-
-		<div class="form-group">
+		<div class="field">
 			<label for="servers">Servers</label>
-			<select name="servers" id="servers">
-				{{#each servers}}
-					<option value="{{this}}">{{this}}</option>
-				{{/each}}
-			</select>
-		</div>
-
-		<div class="form-group">
-			<div class="form-group">
-				<label for=""></label>
-				<input type="text">
+			<div class="ui dropdown selection" name="servers" id="servers">
+				<div class="text">Select</div>
+				<i class="dropdown icon"></i>
+				<div class="menu ui transition">
+					{{#each servers}}
+					<div class="item" data-value="{{this}}">{{this}}</div>
+					{{/each}}
+				</div>
 			</div>
 		</div>
 
-		<div class="form-group">
+		<!-- load balance object field -->
+		<div class="field">
+			<label for=""></label>
+			<input type="text">
+		</div>
+
+		<div class="field">
 			<label for="comments">Comments</label>
 			<textarea name="comments" id="comments">{{comments}}</textarea>
 		</div>
-	
-		<button type="submit" class="btn btn-primary">Update</button>
+
+		<button type="submit" class="ui blue labeled icon submit button js">
+			<i class="icon save"></i>
+			Update
+		</button>
 	</form>
 {{/if}}
 </template>
