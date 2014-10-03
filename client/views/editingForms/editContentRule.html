@@ -9,12 +9,12 @@
 
 			<div class="field">
 				<label for="id">Id</label>
-				<span>{{id}}</span>
+				<input name="id" id="title" type="text" value="{{id}}" />
 			</div>
 
 			<div class="field">
 				<label for="name">Name</label>
-				<span>{{name}}</span>
+				<input name="name" id="name" type="text" value="{{name}}" />
 			</div>
 
 		</div>
@@ -51,7 +51,7 @@
 		</div>
 
 		<div class="field">
-			<label for="urlMatch">urlMatch</label>
+			<label for="urlMatch">URL Match</label>
 			<input name="urlMatch" id="urlMatch" value="{{url_match}}" type="text">
 		</div>
 
@@ -70,8 +70,16 @@
 
 		<!-- load balance object field -->
 		<div class="field">
-			<label for=""></label>
-			<input type="text">
+			<label for="loadbalance">Load Balance</label>
+			<div class="ui dropdown selection" name="loadbalance" id="loadbalance">
+				<div class="text">Select</div>
+				<i class="dropdown icon"></i>
+				<div class="menu ui transition">
+					<div class="item" data-value="0">Round Robin</div>
+					<div class="item" data-value="1">Weighted Round Robin</div>
+					<div class="item" data-value="2">Least Request</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="field">

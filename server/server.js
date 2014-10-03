@@ -31,10 +31,20 @@ function getAuthKey() {
 }
 
 function getAppSettings() {
-	var settings = JSON.parse(Assets.getText('waf.json'));
+	var settings = JSON.parse(Assets.getText('waf.json')),
+			envSettings = {};
 
 	if ( settings ) {
-		return settings.servers[0];
+		for( var i = 0, len = settings.servers.length; i < len; i++ ) {
+			if( settings.servers[i].env === "dev") {
+				envSettings =  settings.servers[i];
+				break;
+			}
+		}
+
+		envSettings.useVpn = settings.useVpn;
+
+		return envSettings;
 	}
 
 	return null;
@@ -44,6 +54,8 @@ function getAppSettings() {
 Meteor.startup(function () {
 
 	wafSettings = getAppSettings();
+
+	debugLog(2, 'wafSettings:', wafSettings);
 
 	if ( !wafSettings.useVpn) { return; }
 

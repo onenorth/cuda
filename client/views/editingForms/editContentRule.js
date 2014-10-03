@@ -41,12 +41,15 @@ Template.editContentRule.rendered = function() {
 
 Template.editContentRule.events({
 	'submit form' : function(evt, tmpl){
-		e.preventDefault();
+
+		evt.preventDefault();
 		var currentPostId = this._id,
 			postProperties = {
 				url: tmpl.find('[name=url]').value,
 				title: tmpl.find('[name=title]').value,
 			};
+
+		console.log(postProperties);
 		Posts.update(currentPostId, {$set: postProperties}, function(error){
 			if(error)
 				Errors.throw(error.reason);
