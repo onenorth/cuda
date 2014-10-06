@@ -1,14 +1,23 @@
 <template name="errors">
-  <div class="errors">
+  {{ #if hasErrors }}
+  <div class="ui error message">
+    <div class="header">
+      Error(s)
+    </div>
+    <div class="list">
     {{#each errors}}
       {{> error}}
     {{/each}}
+    </div>
   </div>
+  {{/if}}
 </template>
 
 <template name="error">
-  <div class="alert alert-error">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    {{message}}
+  <div class="error-details">
+    <i class="close icon js-button-dismiss"></i>
+    <div>
+      {{message}}
+    </div>
   </div>
 </template>

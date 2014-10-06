@@ -1,8 +1,10 @@
+var WAF_SETTINGS_FILE = "waf.json";
+
 var wafSettings,
 		userkey    = null,
 		authHeader = null;
 
-DEBUG = -1; //true activates server-side debuggin
+DEBUG = -1; //true activates server-side debugging
 
 //Hide server-side console debugging behind a flag
 debugLog = (DEBUG > -1) ?
@@ -30,45 +32,59 @@ function getAuthKey() {
 	buildAuthHeader();
 }
 
+function loadWafSettings() {
+	return JSON.parse(Assets.getText(WAF_SETTINGS_FILE));
+}
+
 function getAppSettings() {
-	var settings = JSON.parse(Assets.getText('waf.json')),
-			envSettings = {};
+	var settings = loadWafSettings(),
+			appSettings = {};
+
+	debugLog(2, 'settings:', settings);
 
 	if ( settings ) {
 		for( var i = 0, len = settings.servers.length; i < len; i++ ) {
 			if( settings.servers[i].env === "dev") {
-				envSettings =  settings.servers[i];
+				appSettings = settings.servers[i];
 				break;
 			}
 		}
 
-		envSettings.useVpn = settings.useVpn;
+		appSettings.useVpn = settings.useVpn;
 
-		return envSettings;
+		return appSettings;
 	}
 
 	return null;
 
 }
 
-Meteor.startup(function () {
-
-	wafSettings = getAppSettings();
-
-	debugLog(2, 'wafSettings:', wafSettings);
-
-	if ( !wafSettings.useVpn) { return; }
-
-	//When server starts, request login and get userkey that will allow us to hit REST API
-	getAuthKey();
+function resetData() {
 	VSites.remove({});
 	ServiceGroups.remove({});
 	VirtualServices.remove({});
 	Servers.remove({});
 	ContentRules.remove({});
 	RuleGroupServers.remove({});
+}
+
+Meteor.startup(function () {
+	// retrieve the app settings from an external file
+	wafSettings = getAppSettings();
+
+	if ( wafSettings === undefined || wafSettings === null || !wafSettings.useVpn) { return; }
+
+	//When server starts, request login and get userkey that will allow us to hit REST API
+	getAuthKey();
+
+	// clear out the database data since the data is populated by calls to
+	// the barracuda waf API
+	resetData();
+
 	Meteor.call('queryVSites');
+
 	parseSettings();
+
 });
 
 function parseSettings() {
@@ -226,4 +242,8 @@ Meteor.methods({
 			+ '/rg_servers'
 			+ (contentRuleGroupServerId ? '/' + contentRuleGroupServerId : ''));
 	}
+});
+
+Meteor.methods({
+	handleApiRequest: handleApiRequest
 });

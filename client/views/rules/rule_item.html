@@ -1,0 +1,10 @@
+<template name="ruleItem">
+  <tr class="table-row">
+    <td>{{id}}</td>
+    <td>{{name}}</td>
+    <td class="{{getStatusClass status}}"><i class="{{getStatusIconClass status}}"></i>{{status}}</td>
+    <td>{{service_name}}</td>
+    <td>{{url_match}}</td>
+    <td><a class="ui icon button" href="{{pathFor 'ruleEdit'}}"><i class="edit icon"></i></a></td>
+  </tr>
+</template>

@@ -1,0 +1,117 @@
+<template name="ruleEdit">
+
+<div class="ui page grid">
+
+  <div class="ui column">
+
+    <form class="ui small fluid form segment" role="form">
+
+      <h3 class="ui dividing header">Rule For: <b class="cta">{{name}}</b></h3>
+
+      <div class="two fields">
+
+        <div class="field">
+          <label for="id">Id</label>
+          <input name="id" id="rule-id" type="text" value="{{id}}" />
+        </div>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input name="name" id="name" type="text" value="{{name}}" />
+        </div>
+
+      </div>
+
+      <div class="inline field">
+        <div class="ui toggle checkbox">
+          <input name="status" id="status" checked="{{status}}" type="checkbox">
+          <label for="status">Status</label>
+        </div>
+      </div>
+
+      <div class="two fields">
+
+        <div class="field">
+          <label for="hostMatch">Host Match</label>
+          <textarea name="host_match" id="host-match">{{host_match}}</textarea>
+        </div>
+
+        <div class="field">
+          <label for="extendedMatch">Extended Match</label>
+          <textarea name="extended_match" id="extended-match">{{extended_match}}</textarea>
+        </div>
+
+      </div>
+
+      <div class="two fields">
+
+        <div class="field">
+          <label for="serviceName">Service Name</label>
+          <input name="service_name" id="service-name" value="{{service_name}}" type="text">
+        </div>
+
+        <div class="field">
+          <label for="extendedMatchSequence">Extended Match Sequence</label>
+          <input name="extended_match_sequence" id="extended-match-sequence" type="text" value="{{extended_match_sequence}}">
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label for="urlMatch">URL Match</label>
+        <input name="url_match" id="url-match" value="{{url_match}}" type="text">
+      </div>
+
+      <div class="two fields">
+
+        <div class="field">
+          <label for="servers">Servers</label>
+          <div class="ui dropdown selection" name="servers" id="servers">
+            <div class="text">Select</div>
+            <i class="dropdown icon"></i>
+            <div class="menu ui transition">
+              {{#each servers}}
+              <div class="item" data-value="{{this}}">{{this}}</div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+        <!-- load balance object field -->
+        <div class="field">
+          <label for="loadbalance">Load Balance</label>
+          <div class="ui dropdown selection" name="loadbalance" id="loadbalance">
+            <div class="text">Select</div>
+            <i class="dropdown icon"></i>
+            <div class="menu ui transition">
+              <div class="item" data-value="0">Round Robin</div>
+              <div class="item" data-value="1">Weighted Round Robin</div>
+              <div class="item" data-value="2">Least Request</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments">{{comments}}</textarea>
+      </div>
+
+      <div class="ui buttons">
+
+        <button type="submit" class="ui positive submit button js-button-submit">Update</button>
+
+        <span class="or"></span>
+
+        <button class="ui button js-button-cancel" type="button">Cancel</button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+</template>

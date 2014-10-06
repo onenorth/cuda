@@ -1,3 +1,15 @@
 <!-- dashboard
       will show all existing content rules
 -->
+<template name="dashboard">
+  {{#if currentUser}}
+  <div class="ui page grid">
+    <div class="ui column">
+      <h2 class="ui header">Content Rules</h2>
+      <div class="ten wide column">
+        {{> ruleList}}
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</template>
