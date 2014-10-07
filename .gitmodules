@@ -1,4 +1,0 @@
-
-[submodule "packages/meteor-accounts-ui"]
-	path = packages/meteor-accounts-ui
-	url = https://github.com/onenorth/meteor-accounts-ldap.git

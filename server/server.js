@@ -1,8 +1,8 @@
-var WAF_SETTINGS_FILE = "waf.json";
-
-var wafSettings,
+var WAF_SETTINGS = Meteor.settings.barracuda,
 		userkey    = null,
 		authHeader = null;
+
+console.log(Meteor.settings);
 
 DEBUG = -1; //true activates server-side debugging
 
@@ -13,7 +13,7 @@ debugLog = (DEBUG > -1) ?
 
 //Many of our requests will look the same, so we can handle them genericaly
 function handleApiRequest(url, method, options, attempt) {
-	var endpoint = wafSettings.host + ":" + wafSettings.port + wafSettings.path + url;
+	var endpoint = WAF_SETTINGS.host + ":" + WAF_SETTINGS.port + WAF_SETTINGS.path + url;
 
 	var res = Meteor.http.call((method || 'GET'), endpoint, (options || {auth : authHeader}));
 	debugLog(2, 'Status:', res.statusCode, '\nContent:', res.content, '\nData:', JSON.stringify(res.data));
@@ -22,41 +22,14 @@ function handleApiRequest(url, method, options, attempt) {
 
 //This authentication will be sent along with requests
 function buildAuthHeader(){
-	authHeader = userkey + ":" + wafSettings.password;
+	authHeader = userkey + ":" + WAF_SETTINGS.password;
 }
 
 //Call this at start and whenever our user session expires
 function getAuthKey() {
-	userkey = handleApiRequest('login', 'POST', { data: { username: wafSettings.username, password: wafSettings.password } }).token;
+	userkey = handleApiRequest('login', 'POST', { data: { username: WAF_SETTINGS.username, password: WAF_SETTINGS.password } }).token;
 	debugLog(2, "UserKey:", userkey);
 	buildAuthHeader();
-}
-
-function loadWafSettings() {
-	return JSON.parse(Assets.getText(WAF_SETTINGS_FILE));
-}
-
-function getAppSettings() {
-	var settings = loadWafSettings(),
-			appSettings = {};
-
-	debugLog(2, 'settings:', settings);
-
-	if ( settings ) {
-		for( var i = 0, len = settings.servers.length; i < len; i++ ) {
-			if( settings.servers[i].env === "dev") {
-				appSettings = settings.servers[i];
-				break;
-			}
-		}
-
-		appSettings.useVpn = settings.useVpn;
-
-		return appSettings;
-	}
-
-	return null;
-
 }
 
 function resetData() {
@@ -69,10 +42,6 @@ function resetData() {
 }
 
 Meteor.startup(function () {
-	// retrieve the app settings from an external file
-	wafSettings = getAppSettings();
-
-	if ( wafSettings === undefined || wafSettings === null || !wafSettings.useVpn) { return; }
 
 	//When server starts, request login and get userkey that will allow us to hit REST API
 	getAuthKey();
