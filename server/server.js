@@ -1,10 +1,10 @@
-var WAF_SETTINGS = Meteor.settings.barracuda,
-		userkey    = null,
-		authHeader = null;
+// var settings = Meteor.settings.barracuda,
+// 		userkey    = null,
+// 		authHeader = null;
 
-console.log(Meteor.settings);
+var settings = Meteor.settings.barracuda;
 
-DEBUG = -1; //true activates server-side debugging
+DEBUG = 2; //true activates server-side debugging
 
 //Hide server-side console debugging behind a flag
 debugLog = (DEBUG > -1) ?
@@ -13,23 +13,11 @@ debugLog = (DEBUG > -1) ?
 
 //Many of our requests will look the same, so we can handle them genericaly
 function handleApiRequest(url, method, options, attempt) {
-	var endpoint = WAF_SETTINGS.host + ":" + WAF_SETTINGS.port + WAF_SETTINGS.path + url;
+	var endpoint = settings.host + ":" + settings.port + settings.path + url;
 
 	var res = Meteor.http.call((method || 'GET'), endpoint, (options || {auth : authHeader}));
 	debugLog(2, 'Status:', res.statusCode, '\nContent:', res.content, '\nData:', JSON.stringify(res.data));
 	return res.data;
-}
-
-//This authentication will be sent along with requests
-function buildAuthHeader(){
-	authHeader = userkey + ":" + WAF_SETTINGS.password;
-}
-
-//Call this at start and whenever our user session expires
-function getAuthKey() {
-	userkey = handleApiRequest('login', 'POST', { data: { username: WAF_SETTINGS.username, password: WAF_SETTINGS.password } }).token;
-	debugLog(2, "UserKey:", userkey);
-	buildAuthHeader();
 }
 
 function resetData() {
@@ -42,9 +30,14 @@ function resetData() {
 }
 
 Meteor.startup(function () {
+	var settings = Meteor.settings.barracuda;
 
-	//When server starts, request login and get userkey that will allow us to hit REST API
-	getAuthKey();
+	if(!settings) {
+		throw new Error('Cuda: You must provide Barracuda settings');
+	}
+
+	// configure barracuda then init
+	Barracuda.configure(settings).init();
 
 	// clear out the database data since the data is populated by calls to
 	// the barracuda waf API
@@ -175,10 +168,17 @@ function insertContentRules(cr) {
 }
 
 Meteor.methods({
+	// queryVSites: function() {
+	// 	var data, id;
+	// 	siteSettings.remove({});
+	// 	data = handleApiRequest('vsites');
+	// 	id = siteSettings.insert(data);
+	// 	debugLog(1, "mongo id: ", id);
+	// },
 	queryVSites: function() {
 		var data, id;
 		siteSettings.remove({});
-		data = handleApiRequest('vsites');
+		data = Barracuda.getVirtualSites();
 		id = siteSettings.insert(data);
 		debugLog(1, "mongo id: ", id);
 	},

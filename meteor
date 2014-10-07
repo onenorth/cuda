@@ -1,3 +1,3 @@
 #!/bin/bash
 
-meteor --settings config/development/settings.json
+meteor --settings config/$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')/settings.json
