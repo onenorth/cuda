@@ -1,0 +1,12 @@
+#!/bin/bash
+APP_START_PATH="main.js"
+APP_ENV="production"
+
+echo "Stopping Cuda"
+forever stop $APP_START_PATH
+
+echo "Loading Cuda Environment"
+source config/"$APP_ENV"/env.sh
+
+echo "Starting Cuda Server in $APP_ENV"
+forever -l forever.log -o log/out.log -e log/err.log --append -m 5 --minUptime 1000 --spinSleepTime 1000 start $APP_START_PATH
